@@ -10,13 +10,15 @@
     </PreferenceCategory>
 
     <!--2.-->
-    <PreferenceCategory android:title="Dialog-based preferences">
+    <PreferenceCategory android:title="对话框设置">
+        <!--一个编辑框-->
         <EditTextPreference
             android:dialogTitle="请输入你最喜欢的种族"
             android:key="edittext_preference"
             android:summary="一个使用了编辑文本对话框的例子"
             android:title="请输入你最喜欢的种族" />
 
+        <!--单选对话框-->
         <ListPreference
             android:dialogTitle="请选择一项"
             android:entries="@array/entries_list_preference"
@@ -28,7 +30,7 @@
 
     <!--3.-->
     <PreferenceCategory android:title="Launch preferences">
-        <!-- This PreferenceScreen tag serves as a screen break (similar to page break in word processing). Like for other preference types, we assign a key here so it is able to save and restore its instance state. -->
+        <!--3.1进入另一个PreferenceScreen-->
         <PreferenceScreen
             android:key="screen_preference"
             android:summary="展示另一个首选项配置页面"
@@ -39,6 +41,8 @@
                 android:summary="在另一个页面展示但出于同一个层级的首选项配置"
                 android:title="复选框设置" />
         </PreferenceScreen>
+
+        <!--3.2从一个意图中启动一个activity-->
         <PreferenceScreen
             android:summary="从一个意图中启动一个activity"
             android:title="意图首选项">
